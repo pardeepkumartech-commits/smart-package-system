@@ -18,7 +18,7 @@ export function LockersPage() {
         </div>
         {agent && (
           <div className="row-actions">
-            {(["SMALL", "MEDIUM", "LARGE"] as const).map((size) => (
+            {(["SMALL", "MEDIUM", "LARGE" , "REGULAR"] as const).map((size) => (
               <button
                 key={size}
                 className="ghost"
@@ -35,7 +35,10 @@ export function LockersPage() {
         <Stat label="Total lockers" value={stats?.total} />
         <Stat label="Available" value={stats?.available} />
         <Stat label="Occupied" value={stats?.occupied} />
-        <Stat label="Free S / M / L" value={`${stats?.smallAvailable ?? 0} / ${stats?.mediumAvailable ?? 0} / ${stats?.largeAvailable ?? 0}`} />
+        <Stat
+          label="Free S / M / R / L"
+          value={`${stats?.smallAvailable ?? 0} / ${stats?.mediumAvailable ?? 0} / ${stats?.regularAvailable ?? 0} / ${stats?.largeAvailable ?? 0}`}
+        />
       </div>
       <div className="locker-wall">
         {query.data?.lockers.map((locker: LockerCard) => (
@@ -80,7 +83,7 @@ function Stat({ label, value }: { label: string; value: string | number | undefi
 interface LockerCard {
   id: string;
   code: string;
-  size: "SMALL" | "MEDIUM" | "LARGE";
+  size: "SMALL" | "MEDIUM" | "LARGE" |"REGULAR";
   status: "AVAILABLE" | "OCCUPIED";
   package: {
     customerName: string;

@@ -38,6 +38,7 @@ export const LOCKERS = gql`
       smallAvailable
       mediumAvailable
       largeAvailable
+      regularAvailable
     }
     lockers { ...LockerFields }
   }

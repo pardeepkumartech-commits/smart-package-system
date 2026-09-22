@@ -14,10 +14,11 @@ describe("locker fit", () => {
     assert.equal(canFit("LARGE", "SMALL"), true);
   });
 
-  it("blocks a large package from a small locker", () => {
-    assert.equal(canFit("SMALL", "LARGE"), false);
-    assert.equal(canFit("MEDIUM", "LARGE"), false);
-    assert.equal(canFit("LARGE", "LARGE"), true);
+  it("lets a regular package use regular or large only", () => {
+    assert.equal(canFit("SMALL", "REGULAR"), false);
+    assert.equal(canFit("MEDIUM", "REGULAR"), false);
+    assert.equal(canFit("REGULAR", "REGULAR"), true);
+    assert.equal(canFit("LARGE", "REGULAR"), true);
   });
 });
 

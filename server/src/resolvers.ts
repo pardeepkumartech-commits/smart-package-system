@@ -68,6 +68,7 @@ export const resolvers = {
         smallAvailable: available.filter((l) => l.size === "SMALL").length,
         mediumAvailable: available.filter((l) => l.size === "MEDIUM").length,
         largeAvailable: available.filter((l) => l.size === "LARGE").length,
+        regularAvailable:available.filter((l) => l.size === "REGULAR").length,
       };
     },
   },

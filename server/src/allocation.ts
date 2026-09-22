@@ -4,6 +4,7 @@ export const SIZE_RANK: Record<Size, number> = {
   SMALL: 1,
   MEDIUM: 2,
   LARGE: 3,
+  REGULAR: 2.5,
 };
 
 export function canFit(lockerSize: Size, packageSize: Size): boolean {

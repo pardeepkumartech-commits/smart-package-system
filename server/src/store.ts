@@ -53,6 +53,13 @@ function seed(): Database {
       status: "AVAILABLE" as const,
       packageId: null,
     })),
+    ...["R-01", "R-02"].map((code, i) => ({
+      id: `lk-r-${i + 1}`,
+      code,
+      size: "REGULAR" as const,
+      status: "AVAILABLE" as const,
+      packageId: null,
+    })),
   ];
 
   const packages: PackageRecord[] = [

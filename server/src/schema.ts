@@ -1,6 +1,6 @@
 export const typeDefs = `#graphql
   enum Role { AGENT CUSTOMER }
-  enum Size { SMALL MEDIUM LARGE }
+  enum Size { SMALL MEDIUM LARGE REGULAR }
   enum LockerStatus { AVAILABLE OCCUPIED }
   enum PackageStatus { STORED RETRIEVED }
 
@@ -67,6 +67,7 @@ export const typeDefs = `#graphql
     smallAvailable: Int!
     mediumAvailable: Int!
     largeAvailable: Int!
+    regularAvailable: Int!
   }
 
   type Query {

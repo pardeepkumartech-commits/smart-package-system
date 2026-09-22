@@ -1,5 +1,5 @@
 export type Role = "AGENT" | "CUSTOMER";
-export type Size = "SMALL" | "MEDIUM" | "LARGE";
+export type Size = "SMALL" | "MEDIUM" | "LARGE"| "REGULAR";
 export type LockerStatus = "AVAILABLE" | "OCCUPIED";
 export type PackageStatus = "STORED" | "RETRIEVED";
 

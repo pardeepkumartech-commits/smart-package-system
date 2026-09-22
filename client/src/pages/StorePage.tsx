@@ -48,8 +48,9 @@ export function StorePage() {
           <label>
             Package size
             <select value={size} onChange={(e) => setSize(e.target.value)}>
-              <option value="SMALL">Small — fits S, M, or L</option>
-              <option value="MEDIUM">Medium — fits M or L</option>
+              <option value="SMALL">Small — fits S, M, R, or L</option>
+              <option value="MEDIUM">Medium — fits M, R, or L</option>
+              <option value="REGULAR">Regular — fits R or L</option>
               <option value="LARGE">Large — L only</option>
             </select>
           </label>
